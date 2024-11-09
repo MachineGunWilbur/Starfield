@@ -20,7 +20,9 @@ void draw()
   fill(170, 222, 250);
   rect(0,680,800,800);
 }
-
+void mousePressed(){
+ 	redraw();
+ }  
 class Particle
 {
   double myX,myY,mySpeed,myAngle;
@@ -32,7 +34,7 @@ class Particle
     myY = 700;
     myAngle = ((Math.random()*Math.PI)+Math.PI);
     myColor = color((int)(Math.random()*20)+230, (int)(Math.random()*70)+140,(int)(Math.random()*100));
-    mySpeed = (Math.random()*8)+2;
+    mySpeed = (Math.random()*10)+2;
   }
   void show ()
   {
