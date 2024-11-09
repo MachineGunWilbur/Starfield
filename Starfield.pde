@@ -1,21 +1,21 @@
-Particle[] stars = new Particle[500];
-PImage tnt;
+Particle[] snow = new Particle[500];
+PImage snowball;
 
 void setup()
 {
   size (800,800);
-  for (int i =1;i <stars.length;i++) //sets everything in one array
+  for (int i =1;i <snow.length;i++) //sets everything in one array
   {
-    stars[i]= new Particle();
-    stars[0]= new OddballParticle();
+    snow[i]= new Particle();
+    snow[0]= new OddballParticle();
   }
-  tnt=loadImage("mctnt.jpg");
+  snowball=loadImage("snowball.jpg");
 }
 void draw()
 {
   background (0,0,0);
-  stars[0].move();
-  stars[0].show();
+  snow[0].move();
+  snow[0].show();
 
   fill(103,51,0);
   rect(0,680,800,800);
@@ -32,7 +32,7 @@ class Particle
     myY = 700;
     myAngle = ((Math.random()*Math.PI)+Math.PI);
     myColor = color((int)(Math.random()*20)+230, (int)(Math.random()*70)+140,(int)(Math.random()*100));
-    mySpeed = (Math.random()*4)+2;
+    mySpeed = (Math.random()*8)+2;
   }
   void show ()
   {
@@ -65,14 +65,14 @@ class OddballParticle extends Particle
   }
   void show()
   {
-    image(tnt,(float)myX,(float)myY,80,80);
+    image(snowball,(float)myX,(float)myY,80,80);
     if(myY >=620.0)
     {
        background (256,256,256);
-     for (int i=1;i<stars.length;i++)
+     for (int i=1;i<snow.length;i++)
       {
-        stars[i].move();
-        stars[i].show();
+        snow[i].move();
+        snow[i].show();
 
       }
     }
