@@ -20,9 +20,6 @@ void draw()
   fill(170, 222, 250);
   rect(0,680,800,800);
 }
-void mousePressed(){
- 	redraw();
- }  
 class Particle
 {
   double myX,myY,mySpeed,myAngle;
