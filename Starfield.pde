@@ -13,11 +13,11 @@ void setup()
 }
 void draw()
 {
-  background (0,0,0);
+  background (3, 165, 252);
   snow[0].move();
   snow[0].show();
 
-  fill(103,51,0);
+  fill(170, 222, 250);
   rect(0,680,800,800);
 }
 
