@@ -30,7 +30,7 @@ class Particle
     myX = 400;
     myY = 700;
     myAngle = ((Math.random()*Math.PI)+Math.PI);
-    myColor = color((int)(Math.random()*255), (int)(Math.random()*157)+ 97,(int)(Math.random()*100)+140;
+    myColor = color((int)(Math.random()*255), (int)(Math.random()*157)+ 97,(int)(Math.random()*100)+140);
     mySpeed = (Math.random()*10)+2;
   }
   void show ()
